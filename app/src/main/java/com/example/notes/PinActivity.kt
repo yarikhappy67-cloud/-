@@ -22,9 +22,7 @@ class PinActivity : AppCompatActivity() {
         val btnOk = findViewById<Button>(R.id.btnPinOk)
 
         val isSetup = !prefs.contains("pin_hash")
-        if (isSetup) {
-            tvTitle.text = "Установите PIN (4 цифры)"
-        }
+        if (isSetup) tvTitle.text = "Установите PIN (4 цифры)"
 
         btnOk.setOnClickListener {
             val pin = etPin.text.toString()
@@ -51,9 +49,8 @@ class PinActivity : AppCompatActivity() {
     }
 
     private fun hashPin(pin: String): String {
-        val salt = "notes_salt_v1"
         val md = MessageDigest.getInstance("SHA-256")
-        val bytes = md.digest((salt + pin).toByteArray())
+        val bytes = md.digest(("notes_salt_v1" + pin).toByteArray())
         return bytes.joinToString("") { "%02x".format(it) }
     }
 }
