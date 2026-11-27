@@ -1,0 +1,21 @@
+<resources>
+    <style name="Theme.Notes" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#000000</item>
+        <item name="colorPrimaryVariant">#000000</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+    </style>
+
+    <style name="Theme.Notes.Dark" parent="Theme.Notes">
+        <item name="android:windowBackground">#000000</item>
+        <item name="android:statusBarColor">#000000</item>
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:textColorSecondary">#CCCCCC</item>
+    </style>
+
+    <style name="Theme.Notes.Light" parent="Theme.Notes">
+        <item name="android:windowBackground">#FFFFFF</item>
+        <item name="android:statusBarColor">#FFFFFF</item>
+        <item name="android:textColorPrimary">#000000</item>
+        <item name="android:textColorSecondary">#333333</item>
+    </style>
+</resources>
